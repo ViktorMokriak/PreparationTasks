@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace PreparationTasks
 {
-    class Program
+    public class First
     {
         static void Main(string[] args)
         {
@@ -16,11 +16,15 @@ namespace PreparationTasks
             const float pi = 3.14f;
             double result;
 
+            //selecting the figure
+
             Console.WriteLine("Please, choose the figure and hit Enter:");
             Console.WriteLine("1 - Square");
-            Console.WriteLine("2 - Triangle");
+            Console.WriteLine("2 - Circle");
 
             double сhosenFigure = double.Parse(Console.ReadLine());
+
+            //counting the surface area depending on selected figure
 
             if (сhosenFigure == 1)
             {
@@ -34,10 +38,10 @@ namespace PreparationTasks
             {
                 if (сhosenFigure == 2)
                 {
-                    Console.WriteLine("Please, input the length of the radius for Triangle and hit Enter:");
+                    Console.WriteLine("Please, input the length of the radius for Circle and hit Enter:");
                     lengthOfSideOrRadius = double.Parse(Console.ReadLine());
-                    result = SurfaceAreaTriangle(lengthOfSideOrRadius, pi);
-                    Console.WriteLine("The surface area of the TRIANGLE is: " + result);
+                    result = SurfaceAreaCircle(lengthOfSideOrRadius, pi);
+                    Console.WriteLine("The surface area of the CIRCLE is: " + result);
                 }
 
                 else
@@ -49,7 +53,7 @@ namespace PreparationTasks
 
         }
 
-        public static double SurfaceAreaTriangle(double userInput, float pi)
+        public static double SurfaceAreaCircle(double userInput, float pi)
         {
             return pi * Math.Pow(userInput, 2);
         }

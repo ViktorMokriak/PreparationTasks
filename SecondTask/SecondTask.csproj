@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{5DA64F1D-C189-4DC5-955A-E39400F90EE2}</ProjectGuid>
+    <ProjectGuid>{216B2A3D-92EB-422D-AA2F-4AFE02337581}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>PreparationTasks</RootNamespace>
-    <AssemblyName>PreparationTasks</AssemblyName>
+    <RootNamespace>SecondTask</RootNamespace>
+    <AssemblyName>SecondTask</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -43,7 +43,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Program.cs" />
+    <Compile Include="Second.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
