@@ -13,7 +13,7 @@ namespace SecondTask
             
             const float pi = 3.14f;
             double areaOfSquare;
-            double areaOfTriangle;
+            double areaOfCircle;
 
             //input the length of the side for SQUARE and length of the radius for the CIRCLE
             Console.WriteLine("Please, input the length of the square's side and hit Enter:");
@@ -23,14 +23,14 @@ namespace SecondTask
 
             //counting the surface area for both figures and showing results to console
             areaOfSquare = SurfaceAreaSquare(side);
-            areaOfTriangle = SurfaceAreaTriangle(radius, pi);
+            areaOfCircle = SurfaceAreaTriangle(radius, pi);
             Console.WriteLine("The surface area of the SQUARE is: " + areaOfSquare);
-            Console.WriteLine("The surface area of the CIRCLE is: " + areaOfTriangle);
+            Console.WriteLine("The surface area of the CIRCLE is: " + areaOfCircle);
 
             //calculating length of the side and radius from surface area of SQUARE and CIRCLE
 
             double sideFromSquare = Math.Sqrt(areaOfSquare);
-            double radiusFromSquare = Math.Sqrt(areaOfTriangle/pi);
+            double radiusFromSquare = Math.Sqrt(areaOfCircle/pi);
 
             //checking whether SQUARE can be placed inside CIRCLE
 
