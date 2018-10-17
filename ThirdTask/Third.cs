@@ -20,6 +20,7 @@ namespace ThirdTask
             if (arrLength <= 10)
             {
                 Console.WriteLine("The input length should be more than 10.");
+                Console.ReadKey();
             }
             else
             {
@@ -43,11 +44,9 @@ namespace ThirdTask
                 for (i = 0; i < arrLength; i++)
 
                     if (array[i] % 3 == 0 && array[i] % 5 != 0)
-                    {
-                        resultSum = resultSum + array[i];
-                    }
-
-                Console.WriteLine("The SUM of array elements that are divided to 3 but not divisible to 5 is " + resultSum);
+                       resultSum += array[i];
+                    
+                Console.WriteLine("The SUM of array elements that are multiple to 3 but not multiple to 5 is " + resultSum);
                 Console.ReadKey();
 
             }   

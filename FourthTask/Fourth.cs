@@ -17,18 +17,9 @@ namespace FourthTask
             string inputWord = Convert.ToString(Console.ReadLine());
             char[] array = inputWord.ToCharArray();
 
-
-            if (IsPalindrom(array))
-
-                Console.WriteLine("YES - input word is a palindrom");
-          
-            else
-
-                Console.WriteLine("NO - input word isn't a palindrom");
-
+            Console.WriteLine("Input word - " + (IsPalindrom(array) ? "" : "NOT") + " PALINDROM");
+            Console.ReadLine();
         }
-
-
 
         static bool IsPalindrom(char[] array)
         {

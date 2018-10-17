@@ -26,39 +26,42 @@ namespace PreparationTasks
 
             //counting the surface area depending on selected figure
 
-            if (сhosenFigure == 1)
+            if (сhosenFigure.Equals(1))
             {
                 Console.WriteLine("Please, input the length of the side of Square and hit Enter:");
                 lengthOfSideOrRadius = double.Parse(Console.ReadLine());
-                result = SurfaceAreaSquare(lengthOfSideOrRadius);
+                result = CalculateAreaOfSquare(lengthOfSideOrRadius);
                 Console.WriteLine("The surface area of the SQUARE is: " + result);
+                Console.ReadLine();
             }
 
             else
             {
-                if (сhosenFigure == 2)
+                if (сhosenFigure.Equals(2))
                 {
                     Console.WriteLine("Please, input the length of the radius for Circle and hit Enter:");
                     lengthOfSideOrRadius = double.Parse(Console.ReadLine());
-                    result = SurfaceAreaCircle(lengthOfSideOrRadius, pi);
+                    result = CalculateAreaOfCircle(lengthOfSideOrRadius, pi);
                     Console.WriteLine("The surface area of the CIRCLE is: " + result);
+                    Console.ReadLine();
                 }
 
                 else
                 {
                     Console.WriteLine("The input value is invalid.");
+                    Console.ReadLine();
                 }
 
             }
 
         }
 
-        public static double SurfaceAreaCircle(double userInput, float pi)
+        public static double CalculateAreaOfCircle(double userInput, float pi)
         {
             return pi * Math.Pow(userInput, 2);
         }
 
-        public static double SurfaceAreaSquare(double userInput)
+        public static double CalculateAreaOfSquare(double userInput)
         {
             return Math.Pow(userInput, 2);
         }

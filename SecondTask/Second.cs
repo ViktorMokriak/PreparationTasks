@@ -22,8 +22,8 @@ namespace SecondTask
             double radius = double.Parse(Console.ReadLine());
 
             //counting the surface area for both figures and showing results to console
-            areaOfSquare = SurfaceAreaSquare(side);
-            areaOfCircle = SurfaceAreaTriangle(radius, pi);
+            areaOfSquare = CalculateAreaOfSquare(side);
+            areaOfCircle = CalculateAreaOfCircle(radius, pi);
             Console.WriteLine("The surface area of the SQUARE is: " + areaOfSquare);
             Console.WriteLine("The surface area of the CIRCLE is: " + areaOfCircle);
 
@@ -32,45 +32,35 @@ namespace SecondTask
             double sideFromSquare = Math.Sqrt(areaOfSquare);
             double radiusFromSquare = Math.Sqrt(areaOfCircle/pi);
 
-            //checking whether SQUARE can be placed inside CIRCLE
-
-            if (sideFromSquare*Math.Sqrt(2)<=2*radiusFromSquare)
-            {
-                Console.WriteLine("SQUARE with length of the side " + sideFromSquare + " CAN BE placed inside CIRCLE with radius " + radiusFromSquare);
-            }
-
-            else
-            {
-                Console.WriteLine("SQUARE with length of the side " + sideFromSquare + " CAN NOT BE placed inside CIRCLE with radius " + radiusFromSquare);
-            }
-
-
-            //checking whether CIRCLE can be placed inside SQUARE 
-
-            if (2*radiusFromSquare<=sideFromSquare)
-            {
-                Console.WriteLine("CIRCLE with length of the radius " + radiusFromSquare + " CAN BE placed inside SUQARE with side length " + sideFromSquare);
-            }
-
-            else
-            {
-                Console.WriteLine("CIRCLE with length of the radius " + radiusFromSquare + " CAN NOT BE placed inside SUQARE with side length " + sideFromSquare);
-            }
-
+            Console.WriteLine("CIRCLE with length of the radius " + radiusFromSquare +
+                    " CAN " + (CircleInsideSquare(radius, side) ? "" : "NOT") +
+                    " BE placed inside SUQARE with side length " + sideFromSquare);
+           
+            Console.WriteLine("SQUARE with length of the side " + sideFromSquare +
+                    " CAN " + (SquareInsideCircle(radius, side) ? "" : "NOT") +
+                    " BE placed inside CIRCLE with radius " + radiusFromSquare);
+            Console.ReadLine();
         }
 
 
-        public static double SurfaceAreaTriangle(double userInput, float pi)
+        public static bool CircleInsideSquare(double radiusFromSquare, double sideFromSquare)
+        {
+            return 2 * radiusFromSquare <= sideFromSquare;
+        }
+
+        public static bool SquareInsideCircle(double radiusFromSquare, double sideFromSquare)
+        {
+            return sideFromSquare * Math.Sqrt(2) <= 2 * radiusFromSquare;
+        }
+        
+        public static double CalculateAreaOfCircle(double userInput, float pi)
         {
             return pi * Math.Pow(userInput, 2);
         }
 
-        public static double SurfaceAreaSquare(double userInput)
+        public static double CalculateAreaOfSquare(double userInput)
         {
             return Math.Pow(userInput, 2);
         }
-
-
-
     }
 }
