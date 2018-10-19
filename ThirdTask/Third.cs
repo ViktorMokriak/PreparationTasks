@@ -16,8 +16,6 @@ namespace ThirdTask
             //entering the length of the array and checking whether it's longer than 10
             Console.WriteLine("Please, input the length of array (more than 10):");
 
-            //blablabla
-
             try
             {
                 arrLength = Convert.ToInt32(Console.ReadLine());
@@ -61,6 +59,7 @@ namespace ThirdTask
             finally
             {
                 Console.WriteLine("End of program.");
+                Console.ReadKey();
             }
         }
     }
