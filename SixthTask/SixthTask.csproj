@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{82ADA934-6987-4D32-8AD0-6DD87DACE567}</ProjectGuid>
+    <ProjectGuid>{4D30B3E2-2EBC-41D1-81C2-6437C596D0E7}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>FifthTask</RootNamespace>
-    <AssemblyName>FifthTask</AssemblyName>
+    <RootNamespace>SixthTask</RootNamespace>
+    <AssemblyName>SixthTask</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -43,11 +43,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Complexity.cs" />
-    <Compile Include="Fifth.cs" />
-    <Compile Include="Priority.cs" />
-    <Compile Include="Task.cs" />
+    <Compile Include="ColoredGarland.cs" />
+    <Compile Include="Garland.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SimpleGarland.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

@@ -11,7 +11,7 @@ namespace ThirdTask
         static void Main(string[] args)
         {
             int arrLength;
-            int resultSum=0;
+            int resultSum = 0;
 
             //entering the length of the array and checking whether it's longer than 10
             Console.WriteLine("Please, input the length of array (more than 10):");
@@ -32,9 +32,16 @@ namespace ThirdTask
                     while (i < arrLength)
                     {
                         Console.WriteLine("Please, input element of array and hit Enter");
-                        array[i] = int.Parse(Console.ReadLine());
-                        Console.WriteLine();
-                        i++;
+                        try
+                        {
+                            array[i] = int.Parse(Console.ReadLine());
+                            Console.WriteLine();
+                            i++;
+                        }
+                        catch (FormatException e)
+                        {
+                            Console.WriteLine($"Error: {e.Message}");
+                        }
                     }
 
                     //printing the input array to console
