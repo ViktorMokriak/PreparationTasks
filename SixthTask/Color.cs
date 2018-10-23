@@ -6,8 +6,11 @@ using System.Threading.Tasks;
 
 namespace SixthTask
 {
-    abstract class Garland
+    enum Color
     {
-
+        Red = 1,
+        Yellow,
+        Green,
+        Blue
     }
 }

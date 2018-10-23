@@ -43,8 +43,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Bulb.cs" />
+    <Compile Include="Color.cs" />
+    <Compile Include="ColoredBulb.cs" />
     <Compile Include="ColoredGarland.cs" />
     <Compile Include="Garland.cs" />
+    <Compile Include="SixthTask.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SimpleGarland.cs" />
   </ItemGroup>

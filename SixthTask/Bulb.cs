@@ -6,8 +6,7 @@ using System.Threading.Tasks;
 
 namespace SixthTask
 {
-    abstract class Garland
+    class Bulb
     {
-
     }
 }
