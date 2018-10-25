@@ -44,7 +44,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Bulb.cs" />
-    <Compile Include="Color.cs" />
+    <Compile Include="BulbColor.cs" />
+    <Compile Include="BulbStatus.cs" />
     <Compile Include="ColoredBulb.cs" />
     <Compile Include="ColoredGarland.cs" />
     <Compile Include="Garland.cs" />

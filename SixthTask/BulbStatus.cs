@@ -6,11 +6,9 @@ using System.Threading.Tasks;
 
 namespace SixthTask
 {
-    enum Color
+    enum BulbStatus
     {
-        Red = 1,
-        Yellow,
-        Green,
-        Blue
+        On,
+        Off
     }
 }

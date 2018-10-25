@@ -6,7 +6,17 @@ using System.Threading.Tasks;
 
 namespace SixthTask
 {
-    class SimpleGarland : Garland
+    public class SimpleGarland : Garland
     {
+        List<Bulb> bulbs = new List<Bulb>();
+
+        public override void printStatusOfGarland()
+        {
+            
+        }
+
+        //int currentMinute = int.Parse(DateTime.Now.ToString("mm"));
+        //Console.WriteLine(currentMinute);
+        //Console.ReadLine();
     }
 }

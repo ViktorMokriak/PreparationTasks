@@ -11,9 +11,13 @@ namespace SixthTask
     {
         static void Main(string[] args)
         {
-            int currentMinute = int.Parse(DateTime.Now.ToString("mm"));
-            Console.WriteLine(currentMinute);
-            Console.ReadLine();
+            Console.WriteLine("Please, input length of Garland");
+            int numberOfBulbs = int.Parse(Console.ReadLine());
+
+            // printing of simple garland
+
+            // printing of colored garland
+
         }
     }
 }

@@ -6,8 +6,11 @@ using System.Threading.Tasks;
 
 namespace SixthTask
 {
-    class Bulb
+    enum BulbColor
     {
-        public string bulb { get; set; }
+        Red = 1,
+        Yellow,
+        Green,
+        Blue
     }
 }

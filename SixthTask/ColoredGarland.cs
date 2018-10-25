@@ -8,5 +8,11 @@ namespace SixthTask
 {
     class ColoredGarland : Garland
     {
+        List<ColoredBulb> bulbs = new List<ColoredBulb>();
+
+        public override void printStatusOfGarland()
+        {
+
+        }
     }
 }
