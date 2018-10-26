@@ -6,8 +6,10 @@ using System.Threading.Tasks;
 
 namespace SixthTask
 {
-    class Bulb
+    public class Bulb
     {
-        public string bulb { get; set; }
+        public BulbStatus BulbStatus { get; set; }
+        
     }
 }
+

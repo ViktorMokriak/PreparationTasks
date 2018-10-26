@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace SixthTask
 {
-    enum BulbStatus
+    public enum BulbStatus
     {
-        On,
-        Off
+        Off,
+        On
     }
 }

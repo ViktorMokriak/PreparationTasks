@@ -6,8 +6,9 @@ using System.Threading.Tasks;
 
 namespace SixthTask
 {
-    class ColoredBulb : Bulb
-    {
+    public class ColoredBulb : Bulb
 
+    {
+        public BulbColor BulbColor { get; set; }
     }
 }
