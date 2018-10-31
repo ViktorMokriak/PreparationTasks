@@ -7,7 +7,6 @@ using System.Threading.Tasks;
 namespace SixthTask
 {
     public class ColoredBulb : Bulb
-
     {
         public BulbColor BulbColor { get; set; }
     }

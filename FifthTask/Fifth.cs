@@ -22,32 +22,39 @@ namespace FifthTask
           
             for (int i = 0; i < numberOfTasks; i++)
             {
-                Task newTask = new Task();
+                
                 Console.WriteLine("Please, input the name of Task №: " + (i+1));
-                newTask.NameOfTask = Console.ReadLine();
+                string tempName;
+                int tempPriority;
+                int tempComplexity;
+
+                tempName = Console.ReadLine();
 
                 Console.WriteLine("Please, input the PRIORITY for Task №: " + (i + 1) + "\n" +
                     "1 - for " + Priority.HIGH + "\n" +
                     "2 - for " + Priority.MEDIUM + "\n" +
                     "3 - for " + Priority.LOW);
-                newTask.Priority = int.Parse(Console.ReadLine());
+
+                tempPriority = int.Parse(Console.ReadLine());
 
                 Console.WriteLine("Please, input the COMPLEXITY of Task №: " + (i + 1) + "\n" +
                     "4 - for " + Complexity.DIFFICULT + "\n" +
                     "2 - for " + Complexity.MEDIUM + "\n" +
                     "1 - for " + Complexity.EASY);
-                newTask.Complexity = int.Parse(Console.ReadLine());
+                tempComplexity = int.Parse(Console.ReadLine());
+
+                Task newTask = new Task(tempName, tempPriority, tempComplexity);
+
                 tasks.Add(newTask);
             }
 
             //calculation of the time needed to complete all tasks
             foreach (Task task in tasks)
             {
-                timeForAllTasks += task.Complexity;
+                 timeForAllTasks += task.getTimeForTask();
             }
 
             Console.WriteLine("Total amount of hours needed to execute all tasks is: " + timeForAllTasks);
-
 
             //list of tasks for a certain priority (entered from keyboard)
             Console.WriteLine("Please, specify the PRIORITY of tasks to be shown.\n1 - for HIGH;\n2 - for MEDIUM;\n3 - for LOW");
@@ -55,12 +62,11 @@ namespace FifthTask
 
             foreach (Task task in tasks)
             {
-                if (task.Priority.Equals(priority))
+                if (task.Priority==(Priority)priority)
                 {
                     counter = tasks.Count(); //counting the quantity of tasks with selected PRIORITY
                     Console.WriteLine(task.NameOfTask);
                 }
-                
             }
 
             if (counter.Equals(0))
@@ -70,7 +76,6 @@ namespace FifthTask
                 }
             Console.ReadLine();
 
-            
             //how many tasks can be performed per N days
 
             Console.WriteLine("Please, input N of days:");
@@ -83,7 +88,7 @@ namespace FifthTask
             
             foreach (Task task in SortedByPriority)
             {
-                temp += task.Complexity;
+                temp += (int)task.Complexity;
 
                 if (temp <= nHours)
                 {
