@@ -9,17 +9,41 @@ using System.Threading.Tasks;
 
 namespace SixthTask
 {
-    public abstract class Garland
+    public abstract class Garland<T> where T: Bulb, new()
     {
-        protected List<Bulb> bulbs = new List<Bulb>();
+        protected List<T> bulbs = new List<T>();
         public int NumberOfBulbs { get; set; }
-
-        public virtual void PrintStatusOfGarland()
-  
+ 
+        //initializing of the Garland
+        public Garland (int NumberOfBulbs)
         {
-            foreach (var bulb in bulbs)
-                Console.WriteLine();
+            this.NumberOfBulbs = NumberOfBulbs;
+            for (int i = 0; i < NumberOfBulbs; i++)
+            {
+                T newBulb = new T();
+                bulbs.Add(newBulb);
+            }
         }
-      
+
+        //turn on the particular bulbs
+        public void TurnOnBulb (int currentMinute)
+        {
+            for (int i = 0; i < bulbs.Count; i++)
+            {
+                if (((currentMinute % 2).Equals(0) && (i % 2).Equals(0)) || (!(currentMinute % 2).Equals(0) && !(i % 2).Equals(0)))
+                {
+                    bulbs[i].BulbStatus = BulbStatus.On;
+                }
+         
+            }
+        }
+
+        public void PrintStatusOfGarland()
+        {
+            foreach (Bulb bulb in bulbs)
+            {
+                 bulb.Print();
+            }
+        }
     }
 }

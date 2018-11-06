@@ -10,6 +10,15 @@ namespace SixthTask
     {
         public BulbStatus BulbStatus { get; set; }
         
+        public Bulb()
+        {
+            BulbStatus = BulbStatus.Off;
+        }
+
+        public virtual void Print()
+        {
+            Console.WriteLine("Bulb is " + BulbStatus);
+        } 
     }
 }
 

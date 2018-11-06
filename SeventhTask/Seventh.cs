@@ -49,7 +49,7 @@ namespace SeventhTask
                        country.isTelenorSupported = true;
                    }
 
-                   if (country.isTelenorSupported == false)
+                   if (!country.isTelenorSupported)
                    {
                        Console.WriteLine(country.nameOfCountry);
                    }
